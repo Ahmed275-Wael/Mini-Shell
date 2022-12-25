@@ -1,7 +1,8 @@
 
 #ifndef command_h
 #define command_h
-
+#include<string>
+using namespace std;
 // Command Data Structure
 struct SimpleCommand {
 	// Available space for arguments currently preallocated
@@ -23,6 +24,8 @@ struct Command {
 	char * _inputFile;
 	char * _errFile;
 	int _background;
+	std::string _dirName;
+	int _append;
 
 	void prompt();
 	void print();
@@ -35,5 +38,5 @@ struct Command {
 	static Command _currentCommand;
 	static SimpleCommand *_currentSimpleCommand;
 };
-
-#endif
+ 
+ #endif
